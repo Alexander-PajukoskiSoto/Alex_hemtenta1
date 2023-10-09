@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo list</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/css/bootstrap.min.css">
 </head>
 <body>
-    <a href="https://cat-bounce.com/" style="text-decoration: none;">Click here to see cats bounce! :)</a>
-    
-    <div id="fullScreen" onclick=""><h1 class="text-primary">HEJ</h1></div>
+    <div id="allBox">
+        <form onsubmit="addTask()">
+            <label for="toDoTask" id="toDoTaskLabel">add a task </label> <br>
+            <input type="text" name="toDoTask" id="toDoTask" placeholder="task">
+            <input type="submit" name="submitBtn" id="submitBtn" class="btn btn-primary"> 
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with checkbox">
+              </div>
+        </form>
+        
+    </div>  
+    <script src="./js/script.js"></script>
 </body>
 </html>
