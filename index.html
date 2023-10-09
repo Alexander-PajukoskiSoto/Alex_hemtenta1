@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="./css/css/bootstrap.min.css">
 </head>
 <body>
-    <div id="allBox">
-        <form onsubmit="addTask()">
-            <label for="toDoTask" id="toDoTaskLabel">add a task </label> <br>
-            <input type="text" name="toDoTask" id="toDoTask" placeholder="task">
-            <input type="submit" name="submitBtn" id="submitBtn" class="btn btn-primary"> 
+        <form onsubmit="addTask(event)">
+            <label for="toDoTask" id="toDoTaskLabel">add a task </label>
+            <div class="input-group mb-3">
+                <input type="text" name="toDoTask" id="toDoTask" placeholder="task" class="form-control">
+                <div>
+                    <input type="submit" name="submitBtn" id="submitBtn" class="btn btn-primary"> 
+                 </div>
+             </div><br>
 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -24,7 +27,6 @@
               </div>
         </form>
         
-    </div>  
     <script src="./js/script.js"></script>
 </body>
 </html>
