@@ -10,10 +10,11 @@ const generateHTML = html=>{
     template.innerHTML = html.trim();
     return template.content.firstElementChild;
 }
-
-const newTaskElemnt = generateHTML('<div class="input-group mb-3"><div class="input-group-prepend"><div class="input-group-text"><input type="checkbox" aria-label="Checkbox for following text input"></div></div><input type="text" class="form-control" aria-label="Text input with checkbox"></div>');
-
-console.log(newTaskElemnt);
+//AAAAA FUNKAR INTEE AAAAAAA AAAAAAAAAA
+let newTaskElemnt = generateHTML('<div class="input-group mb-3"><div class="input-group-prepend"><div class="input-group-text"><input type="checkbox"></div></div><input type="text" class="form-control" readonly> <input type="button" name="delete${count}" id="" class="btn btn-primary"></div>');
+for(i=0;items.length>i;i++){
+    document.getElementById("theForm").append(newTaskElemnt);
+}   
 
 const addTask = event => { 
     event.preventDefault();
